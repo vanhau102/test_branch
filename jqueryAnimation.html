@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <style>
+        #intro{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            transition:all 2s;
+        }
+        .border-rad-50{
+            border-radius: 50%;
+            width: 300px!important;
+            height: 300px!important;
+            background-color: rgb(22, 148, 17)!important;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Click để thay đổi</button>
+    <button id="btn2">Click để reset</button>
+    <button id="btn3">Click để chuyển đổi</button>
+    <div id="intro"></div>
+    <!-- Jquery -->
+    <script>
+        $("#btn1").click(function(ev){
+            
+            $("#intro").addClass("border-rad-50");
+        })
+        $("#btn2").click(function(ev){
+            $("#intro").removeClass("border-rad-50");
+        })
+        $("#btn3").click(function(ev){
+            $("#intro").toggleClass("border-rad-50");
+        })
+        // setTimeout(()=>{
+            
+        // },1000);
+    </script>
+</body>
+</html>
